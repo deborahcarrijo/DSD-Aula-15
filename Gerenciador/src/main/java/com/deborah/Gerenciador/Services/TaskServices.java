@@ -43,8 +43,8 @@ public class TaskServices {
 		entity.setEnd_date(task.getEnd_date());
 		entity.setStatus(task.getStatus());
 		entity.setHours(task.getHours());
-		entity.setProject(task.getProject());
-		entity.setUser(task.getUser());
+		entity.setProject_id(task.getProject_id());
+		entity.setUser_id(task.getUser_id());
 		
 		return repository.save(entity);
 	}

@@ -35,12 +35,10 @@ public class Task implements Serializable {
 	@Column(name = "hours", nullable = false)
     private int hours;
 	
-	@ManyToOne
-    @JoinColumn(name = "project_id", nullable = false)
+    @Column(name = "project_id", nullable = false)
 	private Long project_id;
 	
-	@ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @Column(name = "user_id", nullable = false)
 	private Long user_id;
     
     public Task() {
@@ -94,19 +92,19 @@ public class Task implements Serializable {
 		this.hours = hours;
 	}
 
-	public Long getProject() {
+	public Long getProject_id() {
 		return project_id;
 	}
 
-	public void setProject(Long project_id) {
+	public void setProject_id(Long project_id) {
 		this.project_id = project_id;
 	}
 
-	public Long getUser() {
+	public Long getUser_id() {
 		return user_id;
 	}
 
-	public void setUser(Long user_id) {
+	public void setUser_id(Long user_id) {
 		this.user_id = user_id;
 	}
 
